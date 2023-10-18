@@ -1,0 +1,8 @@
+<fonts>
+	<font id="JetbrainsNumbers20" filename="jetbrains_numbers--20.fnt" antialias="true" />
+	<font id="JetbrainsNumbers32" filename="jetbrains_numbers--32.fnt" antialias="true" />
+	<font id="RubikNumbers72" filename="rubik_numbers--72.fnt" antialias="true" />
+	<font id="RubikNumbers76" filename="rubik_numbers--76.fnt" antialias="true" />
+	<font id="RubikNumbers132" filename="rubik_numbers--132.fnt" antialias="true" />
+	<font id="RubikNumbers142" filename="rubik_numbers--142.fnt" antialias="true" />
+</fonts>

@@ -1,0 +1,16 @@
+info face="Rubik Mono One" size=142 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=2 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=142 base=107 scaleW=256 scaleH=256 pages=2 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="rubik_numbers--142_0.png"
+page id=1 file="rubik_numbers--142_1.png"
+chars count=11
+char id=48   x=81    y=0     width=78    height=82    xoffset=10    yoffset=25    xadvance=97    page=0  chnl=15
+char id=49   x=80    y=165   width=78    height=81    xoffset=11    yoffset=26    xadvance=97    page=0  chnl=15
+char id=50   x=0     y=83    width=76    height=82    xoffset=11    yoffset=25    xadvance=97    page=0  chnl=15
+char id=51   x=162   y=83    width=81    height=81    xoffset=9     yoffset=26    xadvance=97    page=0  chnl=15
+char id=52   x=77    y=83    width=84    height=81    xoffset=7     yoffset=26    xadvance=97    page=0  chnl=15
+char id=53   x=0     y=166   width=79    height=81    xoffset=9     yoffset=26    xadvance=97    page=0  chnl=15
+char id=54   x=159   y=165   width=78    height=81    xoffset=10    yoffset=26    xadvance=97    page=0  chnl=15
+char id=55   x=0     y=0     width=74    height=81    xoffset=13    yoffset=26    xadvance=97    page=1  chnl=15
+char id=56   x=0     y=0     width=80    height=82    xoffset=9     yoffset=25    xadvance=97    page=0  chnl=15
+char id=57   x=160   y=0     width=78    height=82    xoffset=9     yoffset=25    xadvance=97    page=0  chnl=15
+char id=58   x=75    y=0     width=31    height=67    xoffset=33    yoffset=40    xadvance=97    page=1  chnl=15
