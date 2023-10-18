@@ -14,8 +14,8 @@ class Center extends WatchUi.Drawable {
   }
 
   function getStressLvl() {
-    var sample = 0.0;
-    var value = "";
+    var sample = null;
+    var value = null;
 
     if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getStressHistory)) {
       sample = SensorHistory.getStressHistory({:period => 1})
@@ -25,7 +25,7 @@ class Center extends WatchUi.Drawable {
       }
     }
 
-    return value.toNumber();
+    return value;
   }
 
   function draw(dc as Dc) as Void {
@@ -33,6 +33,22 @@ class Center extends WatchUi.Drawable {
     var innerRadius = outerRadius * 0.52;
     var thickness = (outerRadius * 0.12).toNumber();
     var padding = (thickness / 1.5).toNumber();
+
+    var stressLvl = getStressLvl();
+    if (stressLvl != null) {
+      var stressColor = Application.Properties.getValue("TenderGreen");
+
+      if (stressLvl > 75) {
+        stressColor = Application.Properties.getValue("WarmRed");
+      } else if (stressLvl > 50) {
+        stressColor = Application.Properties.getValue("EdgyPurple");
+      }
+
+      dc.setColor(stressColor, Graphics.COLOR_BLACK);
+      dc.fillCircle(outerRadius, outerRadius, (innerRadius - padding * 2) - (innerRadius - padding * 4) * stressLvl / 100);
+      dc.setClip(outerRadius - innerRadius, outerRadius - padding / 2, innerRadius * 2, innerRadius + padding / 2);
+      dc.clear();
+    }
 
     var batteryLvl = Math.floor(System.getSystemStats().battery);
     var batteryColor = Application.Properties.getValue("TenderGreen");
@@ -44,21 +60,6 @@ class Center extends WatchUi.Drawable {
     } else if (batteryLvl < 75) {
       batteryColor = Application.Properties.getValue("DeepBlue");
     }
-
-    var stressLvl = getStressLvl();
-    var stressColor = Application.Properties.getValue("TenderGreen");
-
-    if (stressLvl > 75) {
-      stressColor = Application.Properties.getValue("WarmRed");
-    } else if (stressLvl > 50) {
-      stressColor = Application.Properties.getValue("EdgyPurple");
-    }
-
-    dc.setColor(stressColor, Graphics.COLOR_BLACK);
-
-    dc.fillCircle(outerRadius, outerRadius, (innerRadius - padding * 2) - (innerRadius - padding * 4) * stressLvl / 100);
-    dc.setClip(outerRadius - innerRadius, outerRadius - padding / 2, innerRadius * 2, innerRadius + padding / 2);
-    dc.clear();
 
     dc.setClip(outerRadius - innerRadius, outerRadius + padding / 2, innerRadius * 2, innerRadius - padding / 2);
     dc.setColor(batteryColor, Graphics.COLOR_BLACK);
