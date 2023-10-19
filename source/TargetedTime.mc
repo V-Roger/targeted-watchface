@@ -56,37 +56,72 @@ class Time extends WatchUi.Drawable {
             setContext(dc);
         }
 
+        var charWidth = dc.getTextWidthInPixels("0", font);
+        var bgCharWidth = dc.getTextWidthInPixels("0", bgFont);
+
         dc.setAntiAlias(true);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
-            x - padding + 5,
+            x - padding - bgCharWidth + 7,
             y,
             bgFont,
-            hours.format("%02d"),
+            hours.format("%02d").substring(0, 1),
             Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER
         );
         
         dc.drawText(
-            x + padding - 5,
+            x - padding + 4,
             y,
             bgFont,
-            mins,
+            hours.format("%02d").substring(1, 2),
+            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER
+        );
+        
+        dc.drawText(
+            x + padding - 4,
+            y,
+            bgFont,
+            mins.substring(0, 1),
             Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER
         );
+
+        dc.drawText(
+            x + padding + bgCharWidth - 7,
+            y,
+            bgFont,
+            mins.substring(1, 2),
+            Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER
+        );
+
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            x - padding - charWidth,
+            y,
+            font,
+            hours.format("%02d").substring(0, 1),
+            Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER
+        );
         dc.drawText(
             x - padding,
             y,
             font,
-            hours.format("%02d"),
+            hours.format("%02d").substring(1, 2),
             Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER
         );
-        
+
         dc.drawText(
             x + padding,
             y,
             font,
-            mins,
+            mins.substring(0, 1),
+            Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER
+        );
+
+        dc.drawText(
+            x + padding + charWidth,
+            y,
+            font,
+            mins.substring(1, 2),
             Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER
         );
     }
