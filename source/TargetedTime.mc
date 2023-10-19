@@ -24,7 +24,7 @@ class Time extends WatchUi.Drawable {
         var height = dc.getHeight();
 
         padding = width / 25;
-        bgFont = width < 300 ? WatchUi.loadResource(Rez.Fonts.RubikNumbers76) : WatchUi.loadResource(Rez.Fonts.RubikNumbers142);
+        bgFont = width < 300 ? WatchUi.loadResource(Rez.Fonts.RubikNumbers82) : WatchUi.loadResource(Rez.Fonts.RubikNumbers142);
         font = width < 300 ? WatchUi.loadResource(Rez.Fonts.RubikNumbers72) : WatchUi.loadResource(Rez.Fonts.RubikNumbers132);
         yOffset = width < 300 ? height / 2 - 36 : height / 2 - 66;
         bgYOffset = width < 300 ? height / 2 - 38 : height / 2 - 68;
@@ -59,7 +59,7 @@ class Time extends WatchUi.Drawable {
         dc.setAntiAlias(true);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
-            x - padding,
+            x - padding + 5,
             y,
             bgFont,
             hours.format("%02d"),
@@ -67,7 +67,7 @@ class Time extends WatchUi.Drawable {
         );
         
         dc.drawText(
-            x + padding,
+            x + padding - 5,
             y,
             bgFont,
             mins,

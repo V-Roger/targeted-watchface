@@ -34,6 +34,8 @@ class Center extends WatchUi.Drawable {
     var thickness = (outerRadius * 0.12).toNumber();
     var padding = (thickness / 1.5).toNumber();
 
+    dc.setAntiAlias(true);
+
     var stressLvl = getStressLvl();
     if (stressLvl != null) {
       var stressColor = Application.Properties.getValue("TenderGreen");

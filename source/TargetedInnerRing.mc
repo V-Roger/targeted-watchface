@@ -95,7 +95,7 @@ class InnerRing extends WatchUi.Drawable {
         //Draw text
         for (var i = 0; i < heartRate.format("%d").length(); ++i) {
             var symbol = heartRate.format("%d").substring(i, i + 1);
-            var offset = (padding * (i + 1)) / 2.25;
+            var offset = padding / 2 + (padding * (i + 1)) / 2.25;
             var x = outerRadius + Math.cos((arcStart + 3 * padding + offset) * 0.0174533) * (innerRadius - thickness / 2 + 1);
             var y = outerRadius + Math.sin((arcStart + 3 * padding + offset) * 0.0174533) * (innerRadius - thickness / 2 + 1);
             dc.drawText(x, y, font, symbol, Graphics.TEXT_JUSTIFY_LEFT);

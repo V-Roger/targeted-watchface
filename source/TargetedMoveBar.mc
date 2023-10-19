@@ -72,7 +72,7 @@ class MoveBar extends WatchUi.Drawable {
             //Draw text
             for (var j = 0; j < label.length(); ++j) {
                 var symbol = label.substring(j, j + 1);
-                var offset = (padding * (j + 1)) / 2.25;
+                var offset = padding / 2 + (padding * (j + 1)) / 2.25;
                 var x = outerRadius + Math.cos((arcStart + padding + offset) * 0.0174533) * (innerRadius - thickness / 2);
                 var y = outerRadius + Math.sin((arcStart + padding + offset) * 0.0174533) * (innerRadius - thickness / 2);
                 dc.drawText(x, y, Graphics.FONT_XTINY, symbol, Graphics.TEXT_JUSTIFY_LEFT);
