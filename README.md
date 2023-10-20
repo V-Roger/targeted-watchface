@@ -5,7 +5,10 @@ Target-oriented and opinionated watchface for Garmin devices
 
 ## DESIGN
 
- ... soon ...
+!["Targetd watchface on a Venu 3"](Targeted_venu3.png)
+
+
+!["Targetd watchface on a Forerunner 965"](Targeted_fr965.png)
 
 ## LIKE IT?
 
@@ -13,7 +16,8 @@ Target-oriented and opinionated watchface for Garmin devices
 
 ## ASSETS
 
- ... soon ...
+* [Jetbrains Mono](https://www.jetbrains.com/lp/mono)
+* [Rubik Mono One](https://fonts.google.com/specimen/Rubik+Mono+One)
 
 ## LICENSE
 

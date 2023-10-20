@@ -8,6 +8,5 @@
     <property id="DeepBlue" type="number">0x4F5BFF</property>
     <property id="EdgyPurple" type="number">0xDB48E8</property>
     <property id="GoldenYellow" type="number">0xFCE54E</property>
-    <property id="UseMilitaryFormat" type="boolean">false</property>
 
 </properties>

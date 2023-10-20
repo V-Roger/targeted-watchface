@@ -4,7 +4,7 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 
 class OuterRing extends WatchUi.Drawable {
-    var steps = 7000.0 as Float;
+    var steps = 1.0 as Float;
     var font;
     var context = false;
 

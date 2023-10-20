@@ -1,5 +1,2 @@
 <settings>
-    <setting propertyKey="@Properties.UseMilitaryFormat" title="@Strings.MilitaryFormatTitle">
-        <settingConfig type="boolean" />
-    </setting>
 </settings>
